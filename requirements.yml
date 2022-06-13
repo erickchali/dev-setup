@@ -1,0 +1,6 @@
+roles:
+- geerlingguy.docker
+- deekayen.awscli2
+- gantsign.oh-my-zsh
+- viasite-ansible.zsh
+- andrewrothstein.starship

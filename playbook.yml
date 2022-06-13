@@ -1,0 +1,16 @@
+- hosts: localhost
+  connection: local
+  become: true
+  vars:
+    user: echali
+  roles:
+  - role: geerlingguy.docker
+    vars:
+      docker_users:
+      - "{{ user }}"
+  - role: deekayen.awscli2
+  - role: viasite-ansible.zsh
+  - role: gantsign.oh-my-zsh
+    users:
+      - username: "{{ user }}"
+  - role: andrewrothstein.starship
